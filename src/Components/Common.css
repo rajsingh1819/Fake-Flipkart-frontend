@@ -1,0 +1,126 @@
+
+/* Header */
+/* .header{
+  flex: 1; */
+ 
+/* } */
+.nav_bat_wraper a{
+  margin-left: 30px;
+  text-decoration: none;
+ 
+  
+}
+
+/* Register & login*/ 
+/* .FormData input[type=text]{
+
+width:100%;
+flex: 1;
+color: var(--bs-body-color);
+  border-radius: 20px;
+  padding: 10px;
+} */
+
+.text3{
+  text-align: center;
+}
+
+.formColor{
+    padding: 10px;
+    border-radius: 15px;
+   background-color: white;
+    width: 50%;
+    
+   
+    box-shadow: 5px 5px 5px 5px grey;
+    
+    margin: 0 auto;
+  
+}
+.text2{
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+.signup{
+   display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+button{
+   
+    width: 100%;
+   
+}
+.button1{
+    margin-top: 30px;
+    color:white;
+    background-color: blue;
+    
+
+}
+
+/* footer.js */
+/* body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+} */
+footer{
+  
+  position: fixed;
+  bottom: 0;
+  color: white;
+  
+
+  background-color:darkslategray;
+  width: 100%;
+  text-align: center; 
+  height: 5%;
+ 
+ 
+}
+
+/* ProductList */
+.img{
+  /* width={140} height={200} */
+  width: 150px;
+  height: 200px;
+  border-radius: 10px;
+}
+.form-row{
+  display: flex;
+  flex-direction: row;
+ flex-wrap: wrap;
+
+ 
+}
+
+.form-col{
+  border-radius: 10px;
+  margin: 4px;
+  padding:3px;
+  background-color: gray;
+  text-align: center;
+  flex-direction:row;
+  justify-content: space-between;
+  
+}
+
+/* .form-col:focus{
+  background-color: gray;
+  cursor: pointer;
+
+} */
+.form-col:hover{
+  background-color:orange;
+  cursor: pointer;
+
+}
+.card{
+  margin-top: 10px;
+}
+/* .Comment{
+width: 100px;
+
+} */
