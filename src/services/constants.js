@@ -1,0 +1,1 @@
+export const LIST_COMPONENT_DATA = "list_component_data"

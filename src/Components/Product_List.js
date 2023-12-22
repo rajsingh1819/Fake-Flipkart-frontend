@@ -4,10 +4,31 @@ import Footer from './Footer'
 import image from "../Components/1780200.png"
 import "../Components/Common.css"
 import { Button } from 'react-bootstrap'
+import { useDispatch } from 'react-redux'
+import { listComponentData } from '../services/Action/action'
+import { useNavigate } from 'react-router-dom'
+
+
+
+
+
+
 function Product_List() {
     const user = JSON.parse(localStorage.getItem('user-info'));
     // console.log(data1.name);
+    const navigate = useNavigate();
     const [data, setData] = useState([]);
+
+    const dispatch = useDispatch();
+
+    const editForm = (item) => {
+        dispatch(listComponentData(item))
+        navigate('/update')
+
+    };
+
+
+
     const getData = async () => {
         const url = "http://localhost:5000/products/get"
         let result = await fetch(url);
@@ -80,9 +101,9 @@ function Product_List() {
                                 <p className='coloum'> {item.price} </p>
                                 <p className='Comment'> {item.comment} </p>
                                 {
-                                    user.name === "Admin" ? <div className='Action'>
+                                    user && user.name === "Admin" ? <div className='Action'>
                                         <Button variant="danger mb-3" onClick={() => deleteData(item.id)} >Delete</Button>
-                                        <Button variant="primary">Edit</Button>
+                                        <Button variant="primary" onClick={() => editForm(item)}>Edit</Button>
 
                                     </div> : null
                                 }

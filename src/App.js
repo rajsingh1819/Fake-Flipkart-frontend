@@ -1,6 +1,6 @@
 
 import './App.css';
-import { BrowserRouter, Route, Routes ,} from 'react-router-dom';
+import { BrowserRouter, Route, Routes, } from 'react-router-dom';
 // import Header from './Components/Header';
 import AddProduct from './Components/AddProduct';
 import UpdateProduct from './Components/UpdateProduct';
@@ -9,30 +9,37 @@ import Register from './Components/Register';
 
 import Protected from './Components/Protected';
 import Product_List from './Components/Product_List';
+import { store } from './services/Store/store';
+import { Provider } from 'react-redux';
 
 
 
 function App() {
   return (
-    <div >
-      < BrowserRouter>
+    <Provider store={store}>
+      <div >
+        < BrowserRouter>
 
-        <Routes>
-          <Route path="/" element={<Login />} />
+          <Routes>
+            <Route path="/" element={<Login />} />
 
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/add" element={<Protected Cmp={AddProduct} />} />
-          <Route path="/list" element={<Protected Cmp={Product_List} />} />
-          <Route path="/update" element={<Protected Cmp={UpdateProduct} />} />
-        </Routes>
-
-
-      </BrowserRouter>
-      
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/add" element={<Protected Cmp={AddProduct} />} />
+            {/* <Route path="/list" element={<Protected Cmp={Product_List} />} /> */}
+            <Route path="/list" element={<Product_List />} />
 
 
-    </div>
+            <Route path="/update" element={<Protected Cmp={UpdateProduct} />} />
+          </Routes>
+
+
+        </BrowserRouter>
+
+
+
+      </div>
+    </Provider>
   );
 }
 
