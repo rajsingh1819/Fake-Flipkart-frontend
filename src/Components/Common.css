@@ -4,6 +4,9 @@
   flex: 1; */
  
 /* } */
+/* .header{
+  width: 100%;
+} */
 .nav_bat_wraper a{
   margin-left: 30px;
   text-decoration: none;
@@ -20,6 +23,9 @@ color: var(--bs-body-color);
   border-radius: 20px;
   padding: 10px;
 } */
+.Erorr{
+  color: red;
+}
 
 .text3{
   text-align: center;
@@ -90,19 +96,23 @@ footer{
 }
 .form-row{
   display: flex;
-  flex-direction: row;
- flex-wrap: wrap;
+  /* flex-direction: row; */
+   flex-wrap: wrap;
 
  
 }
 
 .form-col{
+  display: flex;
+  flex-direction: column;
   border-radius: 10px;
-  margin: 4px;
-  padding:3px;
+  margin: 10px 0px 0px 7px;
+  
+
+  padding:2.5px;
   background-color: gray;
   text-align: center;
-  flex-direction:row;
+  /* flex-direction:row; */
   justify-content: space-between;
   
 }
@@ -117,12 +127,21 @@ footer{
   cursor: pointer;
 
 }
+
+/* .columStyle{
+  color: white;
+} */
+.coloum1{
+  color:white;
+}
+
+
+
 .card{
-  margin : 10px 0px 35px 10px ;
+  margin : 10px 0px 35px 5px ;
+  
+ 
   /* margin-top: 10px;
   margin-left: 10px; */
 }
-/* .Comment{
-width: 100px;
 
-} */

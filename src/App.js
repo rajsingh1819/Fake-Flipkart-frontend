@@ -11,6 +11,7 @@ import Protected from './Components/Protected';
 import Product_List from './Components/Product_List';
 import { store } from './services/Store/store';
 import { Provider } from 'react-redux';
+import CardItem from './Containers/CardItem';
 
 
 
@@ -31,6 +32,7 @@ function App() {
 
 
             <Route path="/update" element={<Protected Cmp={UpdateProduct} />} />
+            <Route path="/card" element={<CardItem/>} />
           </Routes>
 
 
