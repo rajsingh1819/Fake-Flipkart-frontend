@@ -96,7 +96,8 @@ function Product_List() {
             <div className='card'>
                 <div className='form-row'>
                     {
-                        data.filter(item => item.name.toLowerCase().includes(searchQuery.toLowerCase()))
+                        data.filter(item => (item.name.toLowerCase().includes(searchQuery.toLowerCase()))
+                            || (item.price.toString().includes(searchQuery.toString())))
                             .map((item, i) =>
                                 <div key={i} className='form-col'   >
                                     <div onClick={() => ClickEvent(item)}>
