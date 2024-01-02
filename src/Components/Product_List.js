@@ -19,6 +19,7 @@ function Product_List() {
     // console.log(data1.name);
     const navigate = useNavigate();
     const [data, setData] = useState([]);
+    const [searchQuery, setSearchQuery] = useState('');
 
     const dispatch = useDispatch();
 
@@ -66,7 +67,7 @@ function Product_List() {
 
     useEffect(() => {
         getData();
-       
+
 
 
     }, [])
@@ -76,45 +77,57 @@ function Product_List() {
 
     const ClickEvent = (item) => {
         dispatch(cardComponentData(item))
-       navigate("/card");
+        navigate("/card");
     }
 
- return (
+    return (
 
         <div>
             <Header />
+            <div className='search' >
+                <h1 className="text3">ProductList</h1>
+                <div className='searchText'>
+                    <input type="text" className='form-control' placeholder="Search here" onChange={(e) => setSearchQuery(e.target.value)} />
+                </div>
+            </div>
 
 
-            <h1 className="text3">ProductList</h1>
+
             <div className='card'>
-                <div className='form-row'   >
+                <div className='form-row'>
                     {
-                        data.map((item, i) =>
-                            <div key={i} className='form-col' onClick={() => ClickEvent(item)}  >
+                        data.filter(item => item.name.toLowerCase().includes(searchQuery.toLowerCase()))
+                            .map((item, i) =>
+                                <div key={i} className='form-col'   >
+                                    <div onClick={() => ClickEvent(item)}>
 
-                                <img className='img' src={`http://localhost:5000/products/get/${item.image}`} alt={item.image} />
-                                <div className='columStyle'>
-                                    <p className='coloum1'>{item.name}  </p>
-                                    <p className='coloum2'> {item.price} </p>
-                                    <p className='Comment3'> {item.comment} </p>
+                                        <img className='img' src={`http://localhost:5000/products/get/${item.image}`} alt={item.image} />
+                                        <div className='columStyle'>
+                                            <p className='coloum1'>{item.name}  </p>
+                                            <p className='coloum2'> {item.price} </p>
+                                            <p className='Comment3'> {item.comment} </p>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        {
+                                            user && user.name === "Admin" ? <div className='Action'>
+                                                <Button variant="danger mb-3" onClick={() => deleteData(item.id)} >Delete</Button>
+                                                <Button variant="primary" onClick={() => editForm(item)}>Edit</Button>
+
+                                            </div> : null
+                                        }
+                                    </div>
                                 </div>
-                                {
-                                    user && user.name === "Admin" ? <div className='Action'>
-                                        <Button variant="danger mb-3" onClick={() => deleteData(item.id)} >Delete</Button>
-                                        <Button variant="primary" onClick={() => editForm(item)}>Edit</Button>
-
-                                    </div> : null
-                                }
-                            </div>
 
 
 
-                        )
+                            )
                     }
 
                 </div>
             </div>
-         <div />
+            <div />
             <Footer />
 
 

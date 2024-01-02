@@ -2,26 +2,18 @@ import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
 import Header from '../Components/Header';
-
+import "../Containers/CommonStyle.css"
+import { Button } from 'react-bootstrap';
 function CardItem() {
     const navigate = useNavigate();
     const data = useSelector((state) => state.Raducer1.data);
     console.log(data);
-    useEffect(()=>{
-            // navigate('/list')
-            if(data){
-                navigate('/card')
-            }
-            else{
-                navigate('/list')
-            }
-
-    },[])
+   
     return (
         <div>
             <Header/>
-            <h1>CardItem</h1>
-            {/* `http://localhost:5000/products/get/${item.image}` */}
+            <h1 style={{textAlign:'center'}} >CardItem</h1>
+            
 
             {
                 data !==undefined ? 
@@ -29,22 +21,25 @@ function CardItem() {
                
                     <div style={{display:'flex', width:'50%'}}>
                         
-                        <img src={`http://localhost:5000/products/get/${data.image}`} height={400} width={300}  alt={data.image}/>
+                        <img  src={`http://localhost:5000/products/get/${data.image}`} height={400} width={400}  alt="Data doesn't available"/>
                        
                         <div  style={{display:'flex', flexDirection:'column',justifyContent:'center'}}>
                             <h4>{data.name}</h4>
                             <h4>{data.price}</h4>
                             <h4>{data.comment}</h4>
+                            <div>
+                                <Button>Buy</Button>
+                                <Button variant="danger mt-3">Add to cart</Button>
+
+                            </div>
     
                        </div>
-                       {/* flex-direction: column-reverse;
-    justify-content: center; */}
     
                     </div>
             
              
     
-                  : navigate("/card")
+                  : navigate("/list")
             }
            
            

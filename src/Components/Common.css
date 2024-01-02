@@ -1,17 +1,17 @@
 
-/* Header */
-/* .header{
-  flex: 1; */
- 
-/* } */
-/* .header{
-  width: 100%;
-} */
+/* header */
 .nav_bat_wraper a{
   margin-left: 30px;
   text-decoration: none;
  
   
+}
+.borderStyle{
+  border: 1.5px solid transparent;
+}
+.borderStyle:hover{
+  border: 1.5px solid white;
+  padding: 4px;
 }
 
 /* Register & login*/ 
@@ -23,6 +23,10 @@ color: var(--bs-body-color);
   border-radius: 20px;
   padding: 10px;
 } */
+
+
+
+/* AddProduct */
 .Erorr{
   color: red;
 }
@@ -66,12 +70,8 @@ button{
 }
 
 /* footer.js */
-/* body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
-} */
+
+
 footer{
   
   position: fixed;
@@ -88,16 +88,16 @@ footer{
 }
 
 /* ProductList */
+
 .img{
-  /* width={140} height={200} */
+  
   width: 200px;
   height: 200px;
   border-radius: 10px;
 }
 .form-row{
   display: flex;
-  /* flex-direction: row; */
-   flex-wrap: wrap;
+ flex-wrap: wrap;
 
  
 }
@@ -116,32 +116,31 @@ footer{
   justify-content: space-between;
   
 }
-
-/* .form-col:focus{
-  background-color: gray;
-  cursor: pointer;
-
-} */
 .form-col:hover{
   background-color:orange;
   cursor: pointer;
 
 }
-
-/* .columStyle{
-  color: white;
-} */
 .coloum1{
   color:white;
 }
-
-
-
 .card{
   margin : 10px 0px 35px 5px ;
-  
- 
-  /* margin-top: 10px;
-  margin-left: 10px; */
 }
 
+
+.search{
+  
+    display: flex;
+    background-color: gray;
+    flex-direction: row;
+   
+    justify-content: space-between;
+  
+    align-items: center;
+}
+
+.searchText{
+  align-items: 'center';
+   margin-right:10px
+}

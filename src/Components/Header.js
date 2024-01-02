@@ -28,16 +28,16 @@ function Header() {
                     localStorage.getItem('user-info') ?
                         <>
                             {
-                                user.name === "Admin" ? <> <Link to="/add">Add Product</Link>
-                                    <Link to="/update">Update Product</Link> </> : null
+                                user.name === "Admin" ? <> <Link  to="/add" className='borderStyle'>Add Product</Link>
+                                    <Link to="/update" className='borderStyle'>Update Product</Link> </> : null
                             }
-                            <Link to="/list">Product List</Link>
+                            <Link to="/list" className='borderStyle'>Product List</Link>
 
                         </> :
                         <>
-                            <Link to="/list">Product List</Link>
-                            <Link to="/login" >Login</Link>
-                            <Link to="/register" >Register</Link>
+                            <Link to="/list" className='borderStyle'>Product List</Link>
+                            <Link to="/login" className='borderStyle' >Login</Link>
+                            <Link to="/register" className='borderStyle' >Register</Link>
                         </>
                 }
 
