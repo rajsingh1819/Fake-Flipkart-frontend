@@ -26,6 +26,11 @@ const Login = () => {
 
     const login = async (e) => {
         e.preventDefault();
+       if(!email || !password){
+        alert("Somthing wrong : Please Check your Input field !!!")
+
+       }
+       else{
         const data = { email, password }
 
         const url = "http://localhost:5000/user/login";
@@ -64,6 +69,7 @@ const Login = () => {
 
 
 
+       }
     }
 
 
@@ -79,10 +85,11 @@ const Login = () => {
                 <input type="text" className='form-control' placeholder='Enter your password....' value={password} onChange={(e) => setPassword(e.target.value)} />
                 {/* <button >Login</button> */}
                 <Button className='button1' onClick={(e) => login(e)}>Login</Button>
-                <p>Don't have an account ? <Link to="/register"> Create Account</Link> </p>
+                <p>Don't have an account ? <Link to="/register"> Create Account</Link>  </p>
+                <p><Link to="/help"><h3>Help</h3></Link></p>
             </form>
 
-
+                 
         </div>
     )
 

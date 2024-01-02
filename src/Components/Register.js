@@ -26,39 +26,44 @@ function Register() {
 
 
         e.preventDefault()
-        let data = { name, email, password }
-        console.log(data);
-        const url = "http://localhost:5000/user/signup";
-
-        let result = await fetch(url, {
-            method: 'post',
-            headers: {
-                "Active": "application/json",
-                "Content-type": "application/json"
-            },
-            body: JSON.stringify(data)
-        })
-        result = await result.json();
-
-
-        if (result.message === "Register Successfully !!!") {
-            alert(result.message);
-
-            setEmail('');
-            setName('');
-            setPassword('');
-            navigate('/login')
-
-
-
-
+        if (!name || !email || !password) {
+            alert("Somthing wrong : Please Check your Input field !!!")
         }
         else {
-            alert(result.message);
+            let data = { name, email, password }
+            console.log(data);
+            const url = "http://localhost:5000/user/signup";
+
+            let result = await fetch(url, {
+                method: 'post',
+                headers: {
+                    "Active": "application/json",
+                    "Content-type": "application/json"
+                },
+                body: JSON.stringify(data)
+            })
+            result = await result.json();
+
+
+            if (result.message === "Register Successfully !!!") {
+                alert(result.message);
+
+                setEmail('');
+                setName('');
+                setPassword('');
+                navigate('/login')
+
+
+
+
+            }
+            else {
+                alert(result.message);
+
+            }
+
 
         }
-
-
     }
 
 

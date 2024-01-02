@@ -1,18 +1,51 @@
 /* CardItem.js */
-.cardStyle{
- 
+*{
+  box-sizing: border-box;
+}
+.cardImg{
+  margin-left: -10px;
+  height: 25rem;
+  width: 25rem;
 
-    display:'flex';
-     width:50;
-     background-color: aqua;
-  }
-  .cardImg{
-    height:400;
-     width:300;
-  }
-  .cardText{
-    display:'flex';
+}
+
+   .cardFirst{
+    display: flex;
+    flex-direction: row;
+    
+   
+    align-items: center;
+    /* width: 100%; */
+    flex-wrap: wrap;
+    margin-left: 20px;
+
+   }
+
+  .cardSecond{
+    display: flex;
     flex-direction: column;
-    justify-content: center;
+     justify-content: space-between;
+     margin-left: 16%;
+     padding:30px;
+     border: 2px solid black;
+     box-shadow: 2px 2px 2px 2px gray;
+    
+     align-items: center;
+     margin-bottom: 4px;
+  
+
   }
   
+  
+  .cardThird{
+    margin-left: 15%;
+    display: flex;
+    flex-direction: column;
+    
+    
+    align-items: center
+   
+   
+  }
+  
+ 
