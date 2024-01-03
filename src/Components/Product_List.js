@@ -8,6 +8,7 @@ import { useDispatch } from 'react-redux'
 import { listComponentData } from '../services/Action/action'
 import { cardComponentData } from '../services/Action/action'
 import { useNavigate } from 'react-router-dom'
+import AutoSwiper from './Swiper/AutoSwiper'
 
 
 
@@ -84,12 +85,14 @@ function Product_List() {
 
         <div>
             <Header />
+            
             <div className='search' >
                 <h1 className="text3">ProductList</h1>
                 <div className='searchText'>
                     <input type="text" className='form-control' placeholder="Search here" onChange={(e) => setSearchQuery(e.target.value)} />
                 </div>
             </div>
+            <AutoSwiper/>
 
 
 
@@ -105,7 +108,7 @@ function Product_List() {
                                         <img className='img' src={`http://localhost:5000/products/get/${item.image}`} alt={item.image} />
                                         <div className='columStyle'>
                                             <p className='coloum1'>{item.name}  </p>
-                                            <p className='coloum2'> {item.price} </p>
+                                            <p className='coloum2'> ₹{item.price}/- </p>
                                             <p className='Comment3'> {item.comment} </p>
                                         </div>
                                     </div>

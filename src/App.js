@@ -23,7 +23,7 @@ function App() {
         < BrowserRouter>
 
           <Routes>
-            <Route path="/" element={<Login />} />
+            <Route path="/" element={<Product_List/>} />
 
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />

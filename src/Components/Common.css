@@ -43,7 +43,7 @@ color: var(--bs-body-color);
 .formColor{
     padding: 10px;
     border-radius: 15px;
-   background-color: white;
+    background-color: white;
     width: 50%;
     
    
@@ -137,7 +137,7 @@ footer{
 .search{
   
     display: flex;
-    background-color: gray;
+    /* background-color: gray; */
     flex-direction: row;
    
     justify-content: space-between;

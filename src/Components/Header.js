@@ -11,7 +11,7 @@ function Header() {
     const user = JSON.parse(localStorage.getItem("user-info"))
     function logout() {
         localStorage.clear();
-        navigate('/login')
+        navigate('/list')
 
     }
 
@@ -28,7 +28,7 @@ function Header() {
                     localStorage.getItem('user-info') ?
                         <>
                             {
-                                user.name === "Admin" ? <> <Link  to="/add" className='borderStyle'>Add Product</Link>
+                                user.name === "Admin" ? <> <Link to="/add" className='borderStyle'>Add Product</Link>
                                     <Link to="/update" className='borderStyle'>Update Product</Link> </> : null
                             }
                             <Link to="/list" className='borderStyle'>Product List</Link>
