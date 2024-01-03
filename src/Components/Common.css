@@ -79,7 +79,7 @@ button{
 
 footer{
   
-  position: fixed;
+  position:relative;
   bottom: 0;
   color: white;
   
@@ -111,7 +111,7 @@ footer{
   display: flex;
   flex-direction: column;
   border-radius: 10px;
-  margin: 10px 0px 0px 7px;
+  margin: 10px 0px 0px 14px;
   
 
   padding:2.5px;
@@ -119,6 +119,7 @@ footer{
   text-align: center;
   /* flex-direction:row; */
   justify-content: space-between;
+
   
 }
 .form-col:hover{
@@ -131,6 +132,7 @@ footer{
 }
 .card{
   margin : 10px 0px 35px 5px ;
+ 
 }
 
 

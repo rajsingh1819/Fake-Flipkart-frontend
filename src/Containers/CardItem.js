@@ -4,8 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Header from '../Components/Header';
 import "../Containers/CommonStyle.css"
 import { Button } from 'react-bootstrap';
-import AutoSwiper from '../Components/Swiper/AutoSwiper';
-import Footer from '../Components/Footer';
+
 function CardItem() {
     const [valid, setValid] = useState(false);
     const navigate = useNavigate();
@@ -42,14 +41,14 @@ function CardItem() {
             <Header />
 
             <h1 className='CradHeader' >CardItem</h1>
-            <AutoSwiper />
+
 
 
             {
                 data !== undefined ?
 
 
-                    <div className='cardFirst mt-5 mb-40'>
+                    <div className='cardFirst'>
                         <div className='imgaeStyle'>
                             <img src={`http://localhost:5000/products/get/${data.image}`} className='cardImg' alt="Data doesn't available" />
 

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Header from './Header'
 import { useNavigate } from 'react-router-dom';
-import Footer from './Footer'
 import { Button, Form } from 'react-bootstrap'
 
 function AddProduct() {
@@ -93,7 +92,7 @@ function AddProduct() {
                 </Form >
 
             </div>
-            <Footer />
+            
         </>
 
     )

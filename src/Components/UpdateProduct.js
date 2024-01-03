@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import Header from './Header'
-import Footer from './Footer'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { Button, Form } from 'react-bootstrap'
@@ -84,9 +83,6 @@ function UpdateProduct() {
         </Form >
       </div>
 
-
-
-      <Footer />
     </div>
   )
 }
