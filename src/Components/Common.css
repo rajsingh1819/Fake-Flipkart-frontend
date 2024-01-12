@@ -4,20 +4,38 @@ li{
 }
 
 
-/* header */
-.nav_bat_wraper a{
-  margin-left: 30px;
-  text-decoration: none;
- 
-  
+/* Common.css */
+.nav_bat_wraper {
+  display: flex;
+  align-items: center;
 }
-.borderStyle{
+
+.nav_bat_wraper a {
+  margin: 0 10px; /* Adjust spacing between links */
+  text-decoration: none;
+}
+
+.borderStyle {
   border: 1.5px solid transparent;
 }
-.borderStyle:hover{
+
+.borderStyle:hover {
   border: 1.5px solid white;
   padding: 4px;
 }
+
+/* Responsive styles for small screens */
+@media (max-width: 768px) {
+  .nav_bat_wraper {
+    flex-direction: column; /* Change to column layout for small screens */
+    align-items: flex-start; /* Adjust alignment for small screens */
+  }
+
+  .nav_bat_wraper a {
+    margin: 10px 0; /* Adjust spacing for small screens */
+  }
+}
+
 
 /* Register & login*/ 
 /* .FormData input[type=text]{

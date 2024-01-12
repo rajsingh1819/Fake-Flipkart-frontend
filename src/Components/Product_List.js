@@ -85,14 +85,14 @@ function Product_List() {
 
         <div>
             <Header />
-            
+
             <div className='search' >
                 <h1 className="text3">ProductList</h1>
                 <div className='searchText'>
                     <input type="text" className='form-control' placeholder="Search here" onChange={(e) => setSearchQuery(e.target.value)} />
                 </div>
             </div>
-            <AutoSwiper/>
+            <AutoSwiper />
 
 
 
@@ -115,7 +115,7 @@ function Product_List() {
 
                                     <div>
                                         {
-                                            user && user.name === "Admin" ? <div className='Action'>
+                                            user && user.role === "admin" ? <div className='Action'>
                                                 <Button variant="danger mb-3" onClick={() => deleteData(item.id)} >Delete</Button>
                                                 <Button variant="primary" onClick={() => editForm(item)}>Edit</Button>
 

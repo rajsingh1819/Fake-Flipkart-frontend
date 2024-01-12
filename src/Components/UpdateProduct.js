@@ -22,7 +22,7 @@ function UpdateProduct() {
     setComment(data.comment);
     if (localStorage.getItem('user-info')) {
       let value = JSON.parse(localStorage.getItem('user-info'))
-      value && value.name === 'Admin' ? navigate('/update') : navigate('/list')
+      value && value.role === 'admin' ? navigate('/update') : navigate('/list')
 
     }
   }, [])

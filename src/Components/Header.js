@@ -28,7 +28,7 @@ function Header() {
                     localStorage.getItem('user-info') ?
                         <>
                             {
-                                user.name === "Admin" ? <> <Link to="/add" className='borderStyle'>Add Product</Link>
+                                user.role === "admin" ? <> <Link to="/add" className='borderStyle'>Add Product</Link>
                                     <Link to="/update" className='borderStyle'>Update Product</Link> </> : null
                             }
                             <Link to="/list" className='borderStyle'>Product List</Link>
@@ -43,17 +43,9 @@ function Header() {
 
 
 
-
-
-                {/* <Link to="/add">Add Product</Link>
-                <Link to="/update">Update Product</Link>
-                <Link to="/login" >Login</Link>
-                <Link to="/register" >Register</Link> */}
-
-
             </Nav>
             {localStorage.getItem('user-info') ?
-                <Nav style={{ marginRight: 40 }}>
+                <Nav style={{ marginRight: 40 }}  >
                     <NavDropdown title={user && user.name}>
                         <NavDropdown.Item onClick={logout}>Logout</NavDropdown.Item>
                         <NavDropdown.Item>Profile</NavDropdown.Item>

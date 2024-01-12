@@ -21,7 +21,7 @@ function AddProduct() {
         if (localStorage.getItem('user-info')) {
             let value = JSON.parse(localStorage.getItem("user-info"));
             // console.log("Add product user", value.name);
-            value && value.name === "Admin" ? navigate("/add") : navigate('/list');
+            value && value.role === "admin" ? navigate("/add") : navigate('/list');
         }
 
     }, [])
@@ -92,7 +92,7 @@ function AddProduct() {
                 </Form >
 
             </div>
-            
+
         </>
 
     )
