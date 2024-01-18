@@ -36,7 +36,6 @@ li{
   }
 }
 
-
 /* Register & login*/ 
 /* .FormData input[type=text]{
 
@@ -135,7 +134,7 @@ footer{
   padding:2.5px;
   background-color: gray;
   text-align: center;
-  /* flex-direction:row; */
+  
   justify-content: space-between;
 
   

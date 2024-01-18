@@ -33,14 +33,21 @@ function Product_List() {
 
 
     const getData = async () => {
-        const url = "http://localhost:5000/products/get"
-        let result = await fetch(url);
-        result = await result.json();
-        console.log(result);
+        try {
+            const url = "http://localhost:5000/products/get"
+            let result = await fetch(url);
+            result = await result.json();
+            console.log(result);
 
-        if (result) {
-            setData(result);
+            if (result) {
+                setData(result);
+            }
         }
+        catch {
+            alert("Data is not coming from your backend please fix your Backend");
+
+        }
+
     }
     const deleteData = async (id) => {
         const url = "http://localhost:5000/products/delete"
@@ -59,7 +66,7 @@ function Product_List() {
             }
             catch {
 
-                alert(result.error)
+                alert("Somthing went wrong please check !!!");
 
             }
 

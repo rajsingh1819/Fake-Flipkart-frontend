@@ -10,7 +10,8 @@ function CardItem() {
     const navigate = useNavigate();
     const data = useSelector((state) => state.Raducer1.data);
 
-    console.log(data);
+    console.log("==>", data);
+    console.log("lenghth => ", data.length)
 
     const userAction = () => {
         console.log("userAction target")
@@ -36,6 +37,13 @@ function CardItem() {
         }
     }
 
+    useEffect(() => {
+        if (data.length === 0) {
+            navigate('/list');
+        }
+    }, [data.length]);
+
+
     return (
         <div>
             <Header />
@@ -45,7 +53,7 @@ function CardItem() {
 
 
             {
-                data !== undefined ?
+                data.length === undefined ?
 
 
                     <div className='cardFirst'>
@@ -89,7 +97,7 @@ function CardItem() {
 
 
 
-                    : navigate("/list")
+                    : null
             }
 
 
