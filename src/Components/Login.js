@@ -86,7 +86,7 @@ const Login = () => {
 
                 <Button className='button1' onClick={(e) => login(e)}>Login</Button>
                 <p>Don't have an account ? <Link to="/register"> Create Account</Link>  </p>
-                <p><Link to="/help"><h3>Help</h3></Link></p>
+                <Link to="/help"><h3>Help</h3></Link>
             </form>
 
 

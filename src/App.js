@@ -1,6 +1,6 @@
 
 import './App.css';
-import { BrowserRouter, Route, Routes, } from 'react-router-dom';
+import { BrowserRouter, Link, NavLink, Route, Routes, } from 'react-router-dom';
 // import Header from './Components/Header';
 import AddProduct from './Components/AddProduct';
 import UpdateProduct from './Components/UpdateProduct';
@@ -23,7 +23,7 @@ function App() {
         < BrowserRouter>
 
           <Routes>
-            <Route path="/" element={<Product_List/>} />
+            <Route path="/" element={<Product_List />} />
 
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
@@ -39,6 +39,8 @@ function App() {
 
 
         </BrowserRouter>
+
+
 
 
 
